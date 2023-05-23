@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styleLogin.css">
+    <script src="https://kit.fontawesome.com/261fcb51ed.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            var param = window.location.search;
+            var nome = param.replace('?','')
+            document.getElementById('nome').innerHTML = nome
+        })
+    </script>
+</head>
+<body id="home">
+    <header id="home">
+        <div class="logo">
+            <div id="icon">
+                <i class="far fa-user-circle" style="color: #ffcede;"></i>
+            </div>
+            <div class="boas-vindas">
+                <h1>BEM VINDO(a) <span id="nome"></span>!</h1>
+            </div>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="88" fill="#f1c5d3" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+        </div>
+           
+    </header>
+    <main>
+        
+    </main>
+    <footer id="home">
+        <h4>Todos direitos Reservados Ana Julia 2023</h4>
+    </footer>
+</body>
+</html>

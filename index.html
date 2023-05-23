@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/styleLogin.css">
+  <script src="https://kit.fontawesome.com/261fcb51ed.js" crossorigin="anonymous"></script>
+</head>
+<body id="index">
+  <header id="index"></header>
+  <nav id="index"></nav>
+  <main id="index">
+      <section class="caixa" id="login">
+            <div id="icone">
+              <svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" margin="-125 -140" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>
+            </div>
+            <div>             
+              <h2>Acesso</h2>  
+            </div>  
+            <div id="cxlogin">
+              <label for="txtusuario">Login</label>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#f1c5d3" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+                <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+              </svg>
+              <input type="text" name="txtusuario" id="txtusuario" placeholder="Login">
+              <label for="passsenha">Senha</label>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+                <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"/>
+                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+              <input type="password" name="passsenha" id="passsenha" placeholder="Senha">
+              <input type="submit" value="Entrar" class="botao" onclick="verifica_user()"> 
+              <label id="lembrar"><input type="checkbox">Lembrar minha senha</label>
+      </section>
+      <section id="senha">
+          <div id="passwords">
+            <h4>Esqueci minha senha</h4>
+            <a href="erro.html" class="redefinir">Redefinir senha</a>
+            <h4 id="pagcad">Sem Acesso ao sistema?</h4>
+            <a href="cadastro.html" class="redefinir">Cadastre-se</a>
+          </div>
+          <div id="redes">
+            <h4 id="socialmidia">Entrar com... <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#d87093" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+              <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+            </svg> </h4>
+            <p>
+              <a href="https://pt-br.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook" style="color: #0b51cb;"></i></a>
+               <a href="https://myaccount.google.com/" target="_blank"><i class="fa-brands fa-square-google-plus" style="color: #1d0e90;"></i></a>
+              <a href="https://github.com/" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+              <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D" target="_blank"><i class="fa-brands fa-square-twitter" style="color: #508bf2;"></i></a>
+              <a href="https://www.microsoft.com/pt-br/microsoft-365/buy/compare-all-microsoft-365-products?ranMID=42431&ranEAID=b6/Ff99g6MQ&ranSiteID=b6_Ff99g6MQ-y8ooSLRsmptFBCoYzTRWPg&epi=b6_Ff99g6MQ-y8ooSLRsmptFBCoYzTRWPg&irgwc=1&OCID=AID2200057_aff_7803_1243925&tduid=%28ir__qram2cahwwkfbjjdz1w0cbfnkv2x6tbt2awp6u6e00%29%287803%29%281243925%29%28b6_Ff99g6MQ-y8ooSLRsmptFBCoYzTRWPg%29%28%29&irclickid=_qram2cahwwkfbjjdz1w0cbfnkv2x6tbt2awp6u6e00" target="_blank"><i class="fab fa-windows" style="color: #4c2b7d;"></i></a>
+            </p>
+           
+          </div>
+      </section> 
+  </main>
+  <footer id="index">
+    <h4>Todos direitos Reservados Ana Julia 2023</h4>
+  </footer>
+  <script>
+    function verifica_user(){
+
+    var txtusuario = document.getElementById("txtusuario");
+    var passsenha = document.getElementById("passsenha");
+    
+    var user = 'anajulia';
+    var senha = '123456';
+    var nome = 'Ana-Julia';
+
+    if (user == txtusuario.value && senha == passsenha.value) {
+       window.location.href = "home.html?"+nome;
+    }else{
+       window.location.href = "erro.html";
+    }
+  }
+  </script>
+</body>
+</html>
